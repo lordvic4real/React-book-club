@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import banner from "../images/fortnite.jpg";
-import { Row, Col, layout } from "antd";
+import { Row, Col, Layout } from "antd";
 import { Link } from "@reach/router";
+import "./Home.css";
 
 class Home extends Component {
   constructor(props) {
     super(props);
   }
   render() {
+    const { Content } = Layout;
     return (
       <>
         <Row style={{ height: "600px" }}>
@@ -26,6 +28,44 @@ class Home extends Component {
             }}
           />
         </Row>
+        <Layout style={{ padding: "0 20px" }} />
+        <h4 className="front-title"> HOW IT WORKS</h4>
+        <section>
+          <Content>
+            <Row style={{ height: "290px" }}>
+              <Col span={8} style={{ height: "100%", textAlign: "center" }}>
+                <img
+                  src={banner}
+                  style={{ maxWidth: "auto", height: "200px" }}
+                  alt="image"
+                />
+                <p className="front-description">
+                  schedule and post with bryta {""}
+                </p>
+              </Col>
+              <Col span={8} style={{ height: "100%", textAlign: "center" }}>
+                <img
+                  src={banner}
+                  style={{ maxWidth: "auto", height: "200px" }}
+                  alt="image"
+                />
+                <p className="front-description">
+                  schedule and post with bryta {""}
+                </p>
+              </Col>
+              <Col span={8} style={{ height: "100%", textAlign: "center" }}>
+                <img
+                  src={banner}
+                  style={{ maxWidth: "auto", height: "200px" }}
+                  alt="image"
+                />
+                <p className="front-description">
+                  schedule and post with bryta {""}
+                </p>
+              </Col>
+            </Row>
+          </Content>
+        </section>
       </>
     );
   }
